@@ -1,0 +1,5 @@
+happy.c:4:8: warning: incompatible pointer to integer conversion initializing 'int'
+with an expression of type 'char [4]' [-Wint-conversion]
+   int num1 = "abc";
+       ^      ~~~~~
+1 warning generated.
