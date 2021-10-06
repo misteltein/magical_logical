@@ -1,4 +1,4 @@
-typedef struct{
-    double x;
-    double y;
+typedef struct {
+   double x;
+   double y;
 } Point;

@@ -1,4 +1,4 @@
-typedef struct{
-   Point  center;
+typedef struct {
+   Point center;
    double radius;
 } Circle;

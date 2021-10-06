@@ -12,15 +12,16 @@ int main(int argc, char *argv[]){
     // 内容を1行ずつ読み込んで配列に保存する
     const int SIZE = 3;
     int array[3];
+    // 配列にデータを読み込む
     for(int i=0;i<SIZE;++i){
-        // 配列の要素が余っていないか調べる
         if(fscanf(fp, "%d\n", &array[i]) == EOF){
+            // 配列を埋めきる前にデータがなくなれば警告する
             printf("warning at L17\n");
             fclose(fp);
             return EXIT_FAILURE;
         }
     }
-    { //読み残しがないか調べる
+    { // 読み残しがあれば警告する
       int dummy;
       if(fscanf(fp, "%d\n", &dummy) != EOF){
         printf("warning at L22\n");
