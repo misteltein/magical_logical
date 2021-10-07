@@ -23,8 +23,6 @@ int main() {
    const double R = 1.0;
    const double L_BOX = 2.1;
 
-   Point p = {randomBetween(-0.5 * L_BOX, +0.5 * L_BOX),
-              randomBetween(-0.5 * L_BOX, +0.5 * L_BOX)};
    Circle c = {{0.0, 0.0}, R};
 
    int numSample = 0;
