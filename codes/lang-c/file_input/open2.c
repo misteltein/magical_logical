@@ -2,6 +2,6 @@
 int main(){
     FILE* fp = fopen("hoo.ssv", "r");
     if( fp == NULL ){
-        printf("failure");
+        printf("failed to open the file\n");
     }
 }

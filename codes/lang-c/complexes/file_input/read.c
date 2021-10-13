@@ -5,7 +5,7 @@ int main(){
     // ファイルを開く
     FILE* fp = fopen("sample.ssv", "r");
     if( fp == NULL ){
-        printf("failure\n");
+        printf("failed to open the file\n");
         return EXIT_FAILURE;
     }
     // 内容を1行ずつ読み込む
