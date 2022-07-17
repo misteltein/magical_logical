@@ -1,0 +1,25 @@
+const bgColor = 51;
+const size = 200;
+let x = 0.5 * size;
+let y = 0.5 * size;
+p5.setup = () => {
+    p5.createCanvas(size, size);
+    p5.background(bgColor);
+};
+p5.draw = () => {
+    p5.background(bgColor);
+    p5.circle(x, y, 10);
+};
+p5.keyPressed = () => {
+    const step = 10;
+    const {
+        keyCode,
+        LEFT_ARROW, RIGHT_ARROW, UP_ARROW, DOWN_ARROW
+    } = p5;
+    switch (keyCode) {
+        case LEFT_ARROW:  x -= step; break;
+        case RIGHT_ARROW: x += step; break;
+        case UP_ARROW:    y -= step; break;
+        case DOWN_ARROW:  y += step; break;
+    }
+}

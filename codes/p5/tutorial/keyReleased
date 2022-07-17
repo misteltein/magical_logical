@@ -1,0 +1,32 @@
+let pressingKeys = []; // 押されているキーの keyCode の配列
+const bgColor = 51;
+const width = 200;
+const height = 200;
+p5.setup = () => {
+    p5.createCanvas(200, 200);
+    p5.background(bgColor);
+};
+p5.draw = () => {
+    p5.background(bgColor);
+    // キーが押されているかに応じて色付けして円を描く
+    const circle = (x, y, keyCode) => {
+        if (pressingKeys.includes(keyCode)) {
+            p5.fill(p5.color(255, 50, 100));
+        } else {
+            p5.fill(p5.color(255, 255, 255));
+        }
+        p5.circle(x, y, 60);
+    }
+    circle(0.25 * width, 0.50 * height, p5.LEFT_ARROW);
+    circle(0.75 * width, 0.50 * height, p5.RIGHT_ARROW);
+    circle(0.50 * width, 0.25 * height, p5.UP_ARROW);
+    circle(0.50 * width, 0.75 * height, p5.DOWN_ARROW);
+};
+p5.keyPressed = () => {
+    // 押されたキーの keyCode を配列に保存
+    pressingKeys.push(p5.keyCode);
+}
+p5.keyReleased = () => {
+    // 離されたキーの keyCode を配列から削除
+    pressingKeys = pressingKeys.filter(keyCode => keyCode !== p5.keyCode);
+}

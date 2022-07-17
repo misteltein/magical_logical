@@ -1,0 +1,15 @@
+const sketch = (p5: P5) => {
+    p5.setup = () => {
+        p5.createCanvas(300, 100);
+        p5.background(51);
+        const yMid = 0.5 * p5.height;
+        const d = 50;
+        p5.circle(  0, yMid, d);
+        p5.circle( 50, yMid, d);
+        p5.circle(100, yMid, d);
+        p5.circle(150, yMid, d);
+        p5.circle(200, yMid, d);
+        p5.circle(250, yMid, d);
+        p5.circle(300, yMid, d);
+    };
+};

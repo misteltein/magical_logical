@@ -1,0 +1,17 @@
+const sketch = (p5: P5) => {
+    const bgColor = 51;
+    p5.setup = () => {
+        p5.createCanvas(100, 100);
+        p5.background(bgColor);
+    };
+    p5.keyTyped = () => {
+        const center = 0.5 * p5.width;
+        if (p5.key === 'q') {
+            p5.circle(center, center, 100);
+        }
+        if (p5.key === 'w') {
+            p5.background(bgColor);
+        }
+        return false;
+    };
+};

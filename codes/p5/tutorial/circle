@@ -1,0 +1,7 @@
+const sketch = (p5: P5) => {
+    p5.setup = () => {
+        p5.createCanvas(200, 100);
+        p5.background(51);
+        p5.circle(0, 0, 100);
+    };
+};

@@ -1,0 +1,23 @@
+const bgColor = 51;
+const width = 200;
+const height = 200;
+p5.setup = () => {
+    p5.createCanvas(width, height);
+    p5.background(bgColor);
+};
+p5.draw = () => {
+    p5.background(bgColor);
+    const size = 60;
+    const circle = (x, y, pressed) => {
+        if (pressed) {
+            p5.fill(p5.color(255, 50, 100));
+        } else {
+            p5.fill(p5.color(255, 255, 255));
+        }
+        p5.circle(x, y, size);
+    }
+    circle(0.25 * width, 0.50 * height, p5.keyIsDown(p5.LEFT_ARROW));
+    circle(0.75 * width, 0.50 * height, p5.keyIsDown(p5.RIGHT_ARROW));
+    circle(0.50 * width, 0.25 * height, p5.keyIsDown(p5.UP_ARROW));
+    circle(0.50 * width, 0.75 * height, p5.keyIsDown(p5.DOWN_ARROW));
+};
