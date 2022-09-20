@@ -1,1 +1,1 @@
-./a.out argment1 argment2
+./a.out argument1 argument2

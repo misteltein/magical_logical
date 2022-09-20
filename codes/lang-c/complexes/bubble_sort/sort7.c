@@ -3,7 +3,7 @@
 
 int main(){
     int array[5] = {5, 3, 4, 2, 1};
-    const int size = 5;
+    const int size = sizeof(array) / sizeof(int);
     for(int j=0;j<size-1;++j){
       for(int i=0;i<size;++i){
         printf("%d ",array[i]);

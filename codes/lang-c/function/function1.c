@@ -3,7 +3,8 @@
 int functionA();
 int functionB(int num);
 int main(){
-    printf("%d\n",functionA());// 関数の呼び出し
+    int result = functionA(); // 関数の呼び出し
+    printf("%d\n", result);
 }
 // 実装(本体)
 int functionA(){return functionB(1+1);}
