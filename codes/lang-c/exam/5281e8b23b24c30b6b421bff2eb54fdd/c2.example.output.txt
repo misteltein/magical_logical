@@ -1,4 +1,4 @@
-#respient dc
+#recipient dc
 a A
 b -
 c C

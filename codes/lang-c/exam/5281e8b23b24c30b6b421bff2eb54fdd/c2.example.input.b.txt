@@ -1,4 +1,4 @@
-#respient x y
+#recipient x y
 a 4.0 1.0
 b 4.0 5.0
 c 6.0 2.0
